@@ -66,9 +66,8 @@ form input, form button {
 }
 
 #restaurant-info {
-	/*background: #ffffff;*/
-	background-color: red;
-	width: 60%;
+	background: #ffffff;
+	width: 70%;
 	height: 30%;
 	margin: auto;
 	border: none;
@@ -86,4 +85,6 @@ form input, form button {
 
 #rih-right {
 	margin-left: 20px;
+	width: 150px;
+	text-align: right;
 }
