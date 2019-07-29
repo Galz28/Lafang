@@ -44,7 +44,7 @@ form input, form button {
 	margin-left: 8px;
 }
 
-#restaurant {
+#restaurant-name {
 	width: 650px;
 }
 
@@ -63,7 +63,7 @@ form input, form button {
 }
 
 #restaurant-list {
-	background: #FAFAFA;
+	background: #F1F1F1;
 	padding: 30px 0px 30px 0px;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -71,11 +71,12 @@ form input, form button {
 
 #restaurant-info {
 	background: #ffffff;
-	width: 70%;
+	width: 80%;
 	height: 30%;
 	margin: auto;
 	border: none;
 	border-radius: 25px;
+	margin-bottom: 30px;
 }
 
 #restaurant-info-header {
@@ -83,12 +84,12 @@ form input, form button {
 }
 
 #rih-center {
-	width: 300px;
+	width: 500px;
 	margin-left: 20px;
 }
 
 #rih-right {
 	margin-left: 20px;
-	width: 150px;
+	width: 170px;
 	text-align: right;
 }

@@ -7,7 +7,7 @@ const zomato = new Zomato('1f709c7435c996893fecf4df043a2313')
 const app = express()
 
 
-app.use(express.static(path.join(__dirname, '.')))
+app.use(express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.post('/search', async (req, res) => {
@@ -17,15 +17,15 @@ app.post('/search', async (req, res) => {
 
     const restaurants = data.restaurants.map(r => {
       return {
-        name: r.name,
-        url: r.url,
-        location: r.location,
-        price: r.price_range,
         thumbnail: r.thumb,
+        name: r.name,
+        location: r.location,
         rating: r.user_rating.aggregate_rating,
+        votes: r.user_rating.votes
       }
     })
     res.json({ restaurants })
+    console.log(restaurants);
   } catch (err) {
     console.error(err)
     res.status(500).send('Error')

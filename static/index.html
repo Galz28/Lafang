@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Lafang Restaurant Search</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -15,31 +15,34 @@
 		</div>
 		<div id="h1-container"><h1>Find the best restaurants in Cebu</h1></div>
 		<div id="form-container" class="d-flex justify-content-center mx-auto">
-			<form class="form-inline">
+			<form class="form-inline" action="">
 				<!-- <input id="location" type="text" class="form-control" placeholder="Please type a location"> -->
-				<input id="restaurant" type="text" class="form-control" placeholder="Search for restaurants">
-				<button id="searchbtn" type="button" class="btn btn-dark">Search</button>
+				<input name="restaurant-name" id="restaurant-name" type="text" class="form-control" placeholder="Search for restaurants">
+				<button id="searchbtn" type="submit" class="btn btn-dark">Search</button>
 			</form>
 		</div>
 	</div>
-
-	<template>
-		<div id="restaurant-list" class="container shadow">
-			<div id="restaurant-info" class="shadow-sm p-4">
-				<div id="restaurant-info-header" ><!-- rih -->
-					<img id="resto-pic" src="" width="150" height="150">
-					<div id="rih-center">
-						<h4 id="name">${restaurantname}</h4>
-						<h5 id="city">${city}</h5>
-						<h6 id="address">${address}</h6>
-					</div>
-					<div id="rih-right">
-						<div id="numvote">${ratings}</div>
-						<div id="votes">${votes}</div>
-					</div>
-				</div><!-- rih -->
-			</div>
-		</div>
-	</template>
+	<div id="restaurant-list" class="container shadow">
+		<section id="restaurant-results">
+			<template>
+				<div id="restaurant-info" class="shadow-sm p-4">
+					<div id="restaurant-info-header" ><!-- rih -->
+						<img class="result-thumbnail" id="resto-pic" src="" width="150" height="150">
+						<div id="rih-center">
+							<p class="result-name" id="name"><b>${name}</b></p>
+							<p class="result-locality" id="local">${locality}</p>
+							<p class="result-address" id="address">${address}</p>
+						</div>
+						<div id="rih-right">
+							<div width="5"><p class="result-ratings" id="rating">${ratings}</p></div>
+							<p class="result-votes" id="votes">${votes}</p>
+						</div>
+					</div><!-- rih -->
+				</div>
+			</template>
+		</section>
+	</div>
+	
+	<script src="index.js"></script>
 </body>
 </html>
