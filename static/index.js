@@ -28,7 +28,7 @@ function populateData(results) {
     newResult.querySelector('.result-address').innerText = result.location.address;
     newResult.querySelector('.result-locality').innerText = result.location.locality;
     newResult.querySelector('.result-ratings').innerText = result.rating;
-    newResult.querySelector('.result-votes').innerText = result.votes;
+    newResult.querySelector('.result-votes').innerText = result.votes + " votes";
 	resultArea.appendChild(newResult);
     // newResult.querySelector('.result-price').innerText = '$'.repeat(result.price);
     // newResult.querySelector('.result-website').href = result.url;
