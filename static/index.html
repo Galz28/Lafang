@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css" />
+	<script src="myjs.js"></script>
 </head>
 <body>
 	<div id="header" class="container-fluid">
@@ -16,15 +17,19 @@
 		<div id="h1-container"><h1>Find the best restaurants in Cebu</h1></div>
 		<div id="form-container" class="d-flex justify-content-center mx-auto">
 			<form class="form-inline" action="">
-				<!-- <input id="location" type="text" class="form-control" placeholder="Please type a location"> -->
+					<!-- <input id="location" type="text" class="form-control" placeholder="Please type a location"> -->
 				<input name="restaurant-name" id="restaurant-name" type="text" class="form-control" placeholder="Search for restaurants">
-				<button id="searchbtn" type="submit" class="btn btn-dark">Search</button>
+				<button id="searchbtn" type="submit" class="btn btn-dark" onclick="showLoadingSign()">Search</button>
 			</form>
 		</div>
 	</div>
+	
 	<div id="restaurant-list" class="container shadow">
+		<div id="load-container">
+			<div class="lds-ellipsis" id="load"><div></div><div></div><div></div><div></div></div>
+		</div>
 		<section id="restaurant-results">
-			<template>
+			<template id="result">
 				<div id="restaurant-info" class="shadow-sm p-4">
 					<div id="restaurant-info-header" ><!-- rih -->
 						<img class="result-thumbnail" id="resto-pic" src="" width="150" height="150">
@@ -39,11 +44,12 @@
 							</div>
 						</div>
 					</div><!-- rih -->
+					<hr>
+					<div></div>
 				</div>
 			</template>
 		</section>
-	</div>
-	
+	</div>	
 	<script src="index.js"></script>
 </body>
 </html>

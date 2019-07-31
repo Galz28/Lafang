@@ -5,10 +5,12 @@ const resultArea = document.querySelector('#restaurant-results');
 searchForm.addEventListener('submit', async e => {
   e.preventDefault();
   resultArea.innerHTML = '';
+
   const query = e.target.querySelector('#restaurant-name').value;
   if (query === '') {
     return
   }
+
   e.target.querySelector('#restaurant-name').value = '';
   const res = await fetch('/search', {
     headers: {
@@ -16,8 +18,10 @@ searchForm.addEventListener('submit', async e => {
     },
     method: 'POST', body: `q=${query}`
   })
+
   const json = await res.json();
   populateData(json.restaurants);
+  hideLoadingSign();
 });
 
 function populateData(results) {
@@ -33,4 +37,9 @@ function populateData(results) {
     // newResult.querySelector('.result-price').innerText = '$'.repeat(result.price);
     // newResult.querySelector('.result-website').href = result.url;
   });
+}
+
+function hideLoadingSign(){
+  var load = document.getElementById("load");
+  load.style.display = "none";
 }
