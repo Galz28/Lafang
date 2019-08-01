@@ -83,7 +83,7 @@ form input, form button {
 	border: 0;
 }
 
-#searchbtn {
+#btn-search {
 	width: 130px;
 }
 
@@ -146,17 +146,26 @@ form input, form button {
 #rating-container {
 	background-color: #009604;
 	text-align: center;
-	width: 50px;
-	height: 25px;
+	width: 80px;
+	height: 30px;
 	color: #ffffff;
+	border-radius: 5px;
 }
 
+#rating {
+	font-size: 1.2em;
+}
+
+#votes-container {
+	width: 80px;
+	text-align: center;
+}
+
+#votes {
+	font-size: .8em;
+}
 
 /*loading animation*/
-#load-container {
-	
-}
-
 .lds-ellipsis {
   display: none;
   position: relative;
@@ -233,4 +242,3 @@ form input, form button {
 .btn-circle:focus {
 	outline: 0;
 }
-

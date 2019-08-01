@@ -24,7 +24,7 @@
 					<i class="material-icons" style="color:#848484; margin-left: 10px">search</i>	
 					<input name="restaurant-name" id="restaurant-name" type="text" class="" placeholder="Search for restaurants">
 				</div>
-				<button id="searchbtn" type="submit" class="btn btn-dark" onclick="showLoadingSign();" href="#result">Search</button>
+				<button id="btn-search" type="submit" class="btn btn-dark" onclick="showLoadingSign();" href="#result">Search</button>
 			</form>
 		</div>
 	</div>
@@ -43,8 +43,7 @@
 						</div>
 						<div id="rih-right">
 							<div id="rating-container"><p class="result-ratings" id="rating">${ratings}</p></div>
-							<div><p class="result-votes" id="votes">${votes}</p>
-							</div>
+							<div id="votes-container"><p class="result-votes" id="votes">${votes}</p></div>
 						</div>
 					</div><!-- rih -->
 					<hr>
@@ -53,7 +52,7 @@
 			</template>
 		</section>
 	</div>
-	<button class="btn-circle" id="btn-arrowup" onclick="topFunction()"><i class="material-icons">expand_less</i></button>
+	<button class="btn-circle" id="btn-arrowup" onclick="topFunction()"><i class="material-icons" style="color: #E58800">expand_less</i></button>
 	<script src="index.js"></script>
 </body>
 </html>
