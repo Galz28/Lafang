@@ -1,29 +1,49 @@
 @font-face {
 	font-family: neon;
-	src: url(../font/Neon.ttf);
+	src: url("../font/Neon.ttf");
 }
 
 @font-face {
 	font-family: ubuntu;
-	src: url(../font/Ubuntu-R.ttf);
+	src: url("../font/Ubuntu-R.ttf");
 }
 
 @font-face {
 	font-family: winecar;
-	src: url(../font/Champagne\ &\ Limousines.ttf);
+	src: url("../font/Champagne\ &\ Limousines.ttf");
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: #00C9FF; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #4F5559; 
+}
+
+::-webkit-scrollbar-track-piece {
+	background: #F1F1F1;
 }
 
 #header {
-	background: url(../img/header.jpg);
+	background: url("../img/header.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	height: 600px;
+	height: 400px;
 	text-align: center;
 	background-attachment: scroll;
 }
 
 #logotextcontainer {
-	padding-top: 100px;
+	padding-top: 40px;
 }
 
 #logotextcontainer p {
@@ -33,11 +53,11 @@
 	/*margin-top: 100px;*/
 }
 
-#h1-container {
-	margin-top: 50px;
+#h3-container {
+	margin-top: 30px;
 }
 
-h1 {
+h3 {
 	font-family: ubuntu;
 	font-style: italic;
 	color: #ff8500;
@@ -49,8 +69,18 @@ form input, form button {
 	margin-left: 8px;
 }
 
+#search-container {
+	background-color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	border-radius: 5px;
+}
+
 #restaurant-name {
 	width: 650px;
+	border: 0;
 }
 
 #searchbtn {
@@ -58,7 +88,7 @@ form input, form button {
 }
 
 #form-container {
-	margin-top: 30px;
+	margin-top: 20px;
 	background: rgba(0, 0, 0, 0.4);
 }
 
@@ -72,6 +102,7 @@ form input, form button {
 	padding: 30px 0px 30px 0px;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	display: none;
 }
 
 #restaurant-info {
@@ -113,7 +144,7 @@ form input, form button {
 }
 
 #rating-container {
-	background: green;
+	background-color: #009604;
 	text-align: center;
 	width: 50px;
 	height: 25px;
@@ -181,5 +212,25 @@ form input, form button {
     transform: translate(19px, 0);
   }
 }
-
 /*end of loading animation*/
+
+.btn-circle {
+	display: none;
+	position: fixed;
+	right: 30px;
+	bottom: 70px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: transparent;
+    border-style: none;	
+}
+
+.btn-circle:hover {
+	box-shadow: 1px 1px 5px #C9C9C9;
+}
+
+.btn-circle:focus {
+	outline: 0;
+}
+

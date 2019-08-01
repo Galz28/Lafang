@@ -6,28 +6,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<script src="myjs.js"></script>
 </head>
 <body>
 	<div id="header" class="container-fluid">
 		<div id="logotextcontainer">
-			<img src="/img/lafang-logo.png" width="100" height="100">
+			<img src="/img/lafang-logo.png" width="80" height="80">
 			<p>lafang</p>
 		</div>
-		<div id="h1-container"><h1>Find the best restaurants in Cebu</h1></div>
+		<div id="h3-container"><h3>Find the best restaurants in Cebu</h3></div>
 		<div id="form-container" class="d-flex justify-content-center mx-auto">
 			<form class="form-inline" action="">
 					<!-- <input id="location" type="text" class="form-control" placeholder="Please type a location"> -->
-				<input name="restaurant-name" id="restaurant-name" type="text" class="form-control" placeholder="Search for restaurants">
-				<button id="searchbtn" type="submit" class="btn btn-dark" onclick="showLoadingSign()">Search</button>
+				<div id="search-container">
+					<i class="material-icons" style="color:#848484; margin-left: 10px">search</i>	
+					<input name="restaurant-name" id="restaurant-name" type="text" class="" placeholder="Search for restaurants">
+				</div>
+				<button id="searchbtn" type="submit" class="btn btn-dark" onclick="showLoadingSign();" href="#result">Search</button>
 			</form>
 		</div>
 	</div>
-	
+	<div id="load-container" align="center"><div><div class="lds-ellipsis" id="load"><div></div><div></div><div></div><div></div></div></div></div>
 	<div id="restaurant-list" class="container shadow">
-		<div id="load-container">
-			<div class="lds-ellipsis" id="load"><div></div><div></div><div></div><div></div></div>
-		</div>
+		<!-- <div id="load-container" align="center"><div><div class="lds-ellipsis" id="load"><div></div><div></div><div></div><div></div></div></div></div> -->
 		<section id="restaurant-results">
 			<template id="result">
 				<div id="restaurant-info" class="shadow-sm p-4">
@@ -49,7 +52,8 @@
 				</div>
 			</template>
 		</section>
-	</div>	
+	</div>
+	<button class="btn-circle" id="btn-arrowup" onclick="topFunction()"><i class="material-icons">expand_less</i></button>
 	<script src="index.js"></script>
 </body>
 </html>

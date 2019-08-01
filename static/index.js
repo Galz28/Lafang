@@ -8,10 +8,13 @@ searchForm.addEventListener('submit', async e => {
 
   const query = e.target.querySelector('#restaurant-name').value;
   if (query === '') {
+    hideLoadingSign();
+    hideRestoList();
     return
   }
 
   e.target.querySelector('#restaurant-name').value = '';
+  hideRestoList();
   const res = await fetch('/search', {
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
@@ -22,6 +25,7 @@ searchForm.addEventListener('submit', async e => {
   const json = await res.json();
   populateData(json.restaurants);
   hideLoadingSign();
+  showRestoList();
 });
 
 function populateData(results) {
@@ -42,4 +46,14 @@ function populateData(results) {
 function hideLoadingSign(){
   var load = document.getElementById("load");
   load.style.display = "none";
+}
+
+function hideRestoList() {
+  var list = document.getElementById("restaurant-list");
+  list.style.display = "none";
+}
+
+function showRestoList() {
+  var list = document.getElementById("restaurant-list");
+  list.style.display = "block";
 }
