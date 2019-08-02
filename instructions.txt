@@ -1,0 +1,8 @@
+Internet Connection needed for CDN and Web API.
+
+Things to do before starting Lafang Web App.
+
+1. Enter this command in your terminal.
+	npm install -save express body-parser zomato.js
+
+2.
