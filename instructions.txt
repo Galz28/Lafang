@@ -1,8 +1,27 @@
 Internet Connection needed for CDN and Web API.
+Preferred browser Mozilla or Chrome
+Must have nodejs installed (please download it in this site : https://nodejs.org/en/download)
+
 
 Things to do before starting Lafang Web App.
 
 1. Enter this command in your terminal.
 	npm install -save express body-parser zomato.js
 
-2.
+2. Edit the /Lafang/index.js. Change the port locatad at the bottom. Replace it with a port that is available in your machine
+
+3. Enter this command in your terminal.
+	node index.js
+
+4. Access the app through localhost:yourport
+
+
+Using the app
+
+Disclaimer: If result is not found, the server will get an error or in the web page theres no result just an empty form. I apoligize for that for I was not able to fix and handle that kind of error.I am not yet an expert regarding with the frontend and backend. My objective is to render the data in a presentable way and understand how the backend code works. Regarding the backend I get it in the github for my reference on how to fetch the data and use the api for the reason that i am new to this kind of development.
+
+1. Just enter the restaurant name and hit enter or press the search button.
+
+2. It will render a list of restaurants.
+
+3. Upon scrolling down, an arrow up button will show up in the lower right side of the page. You can use it to go to the upper part of the page and enter new restaurant search.

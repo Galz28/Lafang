@@ -21,7 +21,10 @@ app.post('/search', async (req, res) => {
         name: r.name,
         location: r.location,
         rating: r.user_rating.aggregate_rating,
-        votes: r.user_rating.votes
+        votes: r.user_rating.votes,
+        phonenum: r.phone_numbers,
+        menu: r.menu_url,
+        url: r.url
       }
     })
     res.json({ restaurants })

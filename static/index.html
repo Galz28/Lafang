@@ -28,7 +28,8 @@
 			</form>
 		</div>
 	</div>
-	<div id="load-container" align="center"><div><div class="lds-ellipsis" id="load"><div></div><div></div><div></div><div></div></div></div></div>
+	<div align="center" style="margin-top: 50px;"><p id="agda">"Mangaon ta mga Besh mga Bai!"</p></div>
+	<div id="load-container" align="center"><div class="lds-ellipsis" id="load"><div></div><div></div><div></div><div></div></div></div></div>
 	<div id="restaurant-list" class="container shadow">
 		<!-- <div id="load-container" align="center"><div><div class="lds-ellipsis" id="load"><div></div><div></div><div></div><div></div></div></div></div> -->
 		<section id="restaurant-results">
@@ -47,12 +48,17 @@
 						</div>
 					</div><!-- rih -->
 					<hr>
-					<div></div>
+					<div id="restaurant-info-footer">
+						<div id="phonenum-container"><i class="material-icons">call</i><p class="result-phonenum" id="phonenum">${phonenum}</p></div>
+						<div id="menu-container"><i class="material-icons">fastfood</i><a class="result-menu" id="menu">Menu</a></div>
+						<div id="url-container"><i class="material-icons">language</i><a class="result-url" id="url">Visit Website</a></div>
+					</div>
 				</div>
 			</template>
 		</section>
 	</div>
 	<button class="btn-circle" id="btn-arrowup" onclick="topFunction()"><i class="material-icons" style="color: #E58800">expand_less</i></button>
+	<!-- <div class="footer" id="footer"><p>&#9400; 2019 Lafang</p></div> -->
 	<script src="index.js"></script>
 </body>
 </html>

@@ -10,8 +10,10 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("btn-arrowup").style.display = "block";
+    document.getElementById("footer").style.opacity = "0.8";
   } else {
     document.getElementById("btn-arrowup").style.display = "none";
+    document.getElementById("footer").style.opacity = "";
   }
 }
 

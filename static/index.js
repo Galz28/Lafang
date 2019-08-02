@@ -37,7 +37,10 @@ function populateData(results) {
     newResult.querySelector('.result-locality').innerText = result.location.locality;
     newResult.querySelector('.result-ratings').innerText = result.rating;
     newResult.querySelector('.result-votes').innerText = result.votes + " votes";
-	resultArea.appendChild(newResult);
+    newResult.querySelector('.result-phonenum').innerText = result.phonenum;
+    newResult.querySelector('.result-menu').href = result.menu;
+    newResult.querySelector('.result-url').href = result.url;
+	  resultArea.appendChild(newResult);
     // newResult.querySelector('.result-price').innerText = '$'.repeat(result.price);
     // newResult.querySelector('.result-website').href = result.url;
   });
